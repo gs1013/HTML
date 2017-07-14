@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  min-width: 1010px;
+  background-color: #000000;
+  z-index: 6;
+}
+
+#header-container {
+  position: relative;
+  margin: 0 auto;
+  width: 1010px;
+}
+
+#logo {
+  float: left;
+  width: 110px;
+  height: 50px;
+  background: url(https://dappei.com/assets/application/logo-2a2bbf4b9292cea800e1dee1d318356b.png) no-repeat center 9px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#main-nav {
+  float: left;
+  margin-right: 10px;
+  display: flex;
+}
+
+#main-nav .main-nav a {
+  padding: 5px 15px;
+  height: 50px;
+  color: #C7C7C7;
+  font-size: 16px;
+}
+
+#user-nav {
+  float: right;
+}
+
+#user-nav .user-nav {
+  display: flex;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#main-nav .main-nav li {
+  float: left;
+}
+
+#main-nav .dropdown a:hover {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+
+#main-nav .fa-caret-down input {
+  position: relative;
+  width: 280px;
+  height: 30px;
+  border-radius: 3%;
+}
+
+#main-nav .fa-caret-down>button {
+  position: absolute;
+  bottom: -45px;
+  right: 31%;
+  background: none;
+  border: none;
+}
+
+#user-nav ul .signin-button {
+  padding: 0 20px;
+  height: 34px;
+  line-height: 34px;
+  color: white;
+  background: #333333;
+  font-weight: bold;
+  font-size: 16px;
+  border-style: none;
+}
+
+#user-nav ul .signup-button {
+  padding: 0 20px;
+  height: 34px;
+  line-height: 34px;
+  color: white;
+  background-color: #9F35FF;
+  font-weight: bold;
+  font-size: 16px;
+  border-style: none;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 70px 25px 40px 25px;
+  min-height: 100%;
+  background-color: #FFFFFF;
+  cursor: auto;
+}
+
+#page{
+  width: 1010px;
+  height: 2315px;
+}
+
+#banner {
+  position: relative;
+  margin-bottom: 45px;
+  width: 960px;
+  height: 450px;
+}
+
+#banner .slides articles li {
+  position: relative;
+}
+
+#banner .slides-h3 {
+  position: absolute;
+  bottom: 24px;
+  left: 45px;
+  z-index: 2;
+  width: 650px;
+  height: 85px;
+  font-size: 26px;
+  line-height: 38px;
+  overflow: hidden;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+#main {
+  margin-right: 45px;
+  width: 625px;
+  display: inline-block;
+}
+
+#main .article-container {}
+
+#main .tab {
+  margin-bottom: 20px;
+  height: 40px;
+  border-bottom: 1px solid #000000;
+}
+
+#main .tab li {
+  float: left;
+}
+
+#main .tab li a:hover {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+
+#main .tab li a {
+  display: block;
+  margin-top: 5px;
+  width: 160px;
+  height: 35px;
+  line-height: 35px;
+  color: #000000;
+  border: 1px solid #000000;
+  border-bottom: 0;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+#articles-list .cover a {
+  position: relative;
+}
+
+#articles-list .category {
+  position: absolute;
+  left: 240px;
+  bottom: 44px;
+  padding: 15px 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+#articles-list .img-block {
+  display: flex;
+}
+
+#articles-list .more {
+  border-top: 1px solid #000000;
+  padding: 10px 0;
+  text-align: right;
+  width: 600px;
+}
+
+#sidebar {
+  display: inline-block;
+  float: right;
+  width: 290px;
+  height: 527px;
+}
+
+#sidebar h2 {
+  border-bottom: 1px solid #000000;
+}
+
+#sidebar .photos img {
+  width: 142px;
+  height: 227px;
+
+}
+
+#sidebar .tags a{
+  display: inline-block;
+  width: 78px;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0 5px;
+  line-height: 25px;
+  margin-right: 4px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#sidebar .users img{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#sidebar .instagram img{
+  width: 94px;
+  height: 94px;
+
+}
+
+#footer {
+  background-color: #000000;
+}
+
+#footer .fanpage img{
+  width: 315px;
+  height: 70px;
+}
+
+#footer-nav-container {
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-right: 60px;
+  padding-bottom: 3px;
+  padding-left: 60px;
+  text-decoration: none;
+}
+
+#footer-nav-container a {
+  color: white;
+}
