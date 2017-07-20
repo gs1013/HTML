@@ -5,9 +5,32 @@
   <meta charset="utf-8">
   <title>Dappei 搭配 - 高质感服侍穿搭网站</title>
   <link rel="stylesheet" href="index.css">
+  <script type="text/javascript">
+    window.onload = function(){
+      var slideshow = document.getElementsByClassName('slideshow');
+      var index = 0;
+      Slideshow();
+
+      function Slideshow(){
+        for(var i = 0; i < slideshow.length; i++){
+          slideshow[i].style.opacity = "0";
+        }
+        slideshow[index].style.opacity = "1";
+        index++;
+
+        if(index > slideshow.length - 1){
+          index = 0;
+        }
+        setTimeout(Slideshow, 4000);
+      }
+
+    }
+  </script>
 </head>
 
 <body>
+
+
   <header id="header" style="opacity:1;">
     <div id="header-container">
       <h1>
@@ -16,7 +39,7 @@
       <nav id="main-nav">
         <ul class="main-nav">
           <li class="dropdown">
-            <a href="https://dappei.com/">用户121231321231321321311</a>
+            <a href="https://dappei.com/">用户</a>
           </li>
           <li class="dropdown">
             <a href="https://dappei.com/">穿搭</a>
@@ -30,15 +53,19 @@
           <li class="search-box-continer">
             <i class="fa-caret-down">
               <input type="text" class="search-query" placeholder="现在大家都在搜寻「运动」">
-                <button><img src="http://freeiconbox.com/icon/256/14073.png" alt="icon/256/14073.png" width=13px height=13px></button>
+                <button><img src="http://freeiconbox.com/icon/256/14073.png" alt="icon/256/14073.png" width=21px height=20px></button>
             </i>
           </li>
         </ul>
       </nav>
       <nav id="user-nav">
         <ul class="user-nav">
-          <input class="signin-button" type="button" value="登入">
-          <input class="signup-button" type="button" value="加入">
+          <li>
+            <a class="signin-button" href="#">登入</a>
+          </li>
+          <li>
+            <a class="signup-button" href="#">加入</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -46,33 +73,47 @@
   <div class="login" id="container">
     <div id="pages">
       <div id="banner">
-        <ul class="slides articles">
-          <li>
-            <a href=""><img src="https://images.dappei.com/uploads/article/cover/2867/large_f66dd957e440782b.jpg" >
-              <h3 class="slides-h3">：「我在我們的星球等你。」《花甲男孩》尺度超大的他們沒道理不是真情侶！</h3>
-            </a>
+        <ul class="slides-articles">
+          <li class="slideshow">
+            <img src="https://images.dappei.com/uploads/article/cover/2879/large_76adeb91644ed0ee.jpg">
+            <span id="slides-h3">拍照不要再腳交叉了！跟著超短瀏海始祖「三戶夏芽」擺 pose，六招擺脫類網美</span>
+          </li>
+          <li class="slideshow">
+            <img src="https://images.dappei.com/uploads/article/cover/2856/large_0f050f1447d84730.jpg">
+            <span id="slides-h3">現在大家都在喝「方型」珍珠！拿著超潮提袋，連路人都問你去哪買？</span>
+          </li>
+          <li class="slideshow">
+            <img src="https://images.dappei.com/uploads/article/cover/2862/large_68caa5c6ec4fde7a.jpg">
+            <span id="slides-h3">讓《花甲男孩》迷哭倒！非戲劇班出身的她除了驚人的好演技，現實生活中穿搭依舊鄭花慧</span>
+          </li>
+          <li class="slideshow">
+            <img src="https://images.dappei.com/uploads/article/cover/2892/large_e39969b18a7720f2.jpg">
+            <span id="slides-h3">韓妞集體淪陷，曾登韓國代購第一寶座！降落台灣的「花生人」星球崛起，讓你少女心噴發抵擋不了</span>
           </li>
         </ul>
-        <!--<ol class="flex-control-nav flex-control-padding">
+        <ol class="control-nav ">
           <li>
-            <a href="#" class="flex-active">1</a>
+            <a class="control-nav-trol" href='javascript: void(0)'></a>
           </li>
           <li>
-            <a href="#" class>2</a>
+            <a class="control-nav-trol" href='javascript: void(0)'></a>
           </li>
           <li>
-            <a href="#" class>3</a>
+            <a class="control-nav-trol" href='javascript: void(0)'></a>
           </li>
-        </ol>-->
+          <li>
+            <a class="control-nav-trol" href='javascript: void(0)'></a>
+          </li>
+        </ol>
       </div>
       <div id="main">
         <div class="article-container">
           <ul class="tab">
             <li>
-              <a class="popular active" data-class="popular-articles" href="#">熱門文章</a>
+              <a class="popular active" data-class="popular-articles" href="javascript: void(0)">熱門文章</a>
             </li>
             <li>
-              <a class="latest" data-class="latest-article" href="#">最新文章</a>
+              <a class="latest" data-class="latest-article" href='javascript: void(0)'>最新文章</a>
             </li>
           </ul>
           <div class="popular-articles tab-container">
@@ -81,7 +122,7 @@
                 <div class="img-block">
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2850"><img src="https://images.dappei.com/uploads/article/square_cover/2850/medium_b3b30cd3a9889a70.jpg" alt="medium_b3b30cd3a9889a70"></a>
+                      <a href="https://dappei.com/articles/2850"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2850/medium_b3b30cd3a9889a70.jpg" alt="medium_b3b30cd3a9889a70"></a>
                       <a class="category" href="https://dappei.com/article_categories/1">穿搭</a>
                       <div class="info">
                         <h3>
@@ -92,7 +133,7 @@
                   </div>
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2788"><img src="https://images.dappei.com/uploads/article/square_cover/2788/medium_9daf98a801214fe8.jpg" alt="medium_9daf98a801214fe8.jpg"></a>
+                      <a href="https://dappei.com/articles/2788"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2788/medium_9daf98a801214fe8.jpg" alt="medium_9daf98a801214fe8.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/4">美日</a>
                       <div class="info">
                         <h3>
@@ -105,7 +146,7 @@
                 <div class="img-block">
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2842"><img src="https://images.dappei.com/uploads/article/square_cover/2842/medium_4d4789e72ce7af89.jpg" alt="medium_4d4789e72ce7af89.jpg"></a>
+                      <a href="https://dappei.com/articles/2842"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2842/medium_4d4789e72ce7af89.jpg" alt="medium_4d4789e72ce7af89.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/5">生活</a>
                       <div class="info">
                         <h3>
@@ -116,7 +157,7 @@
                   </div>
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2872"><img src="https://images.dappei.com/uploads/article/square_cover/2872/medium_908e3df73d963365.jpg" alt="medium_908e3df73d963365.jpg"></a>
+                      <a href="https://dappei.com/articles/2872"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2872/medium_908e3df73d963365.jpg" alt="medium_908e3df73d963365.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/2">人物</a>
                       <div class="info">
                         <h3>
@@ -129,7 +170,7 @@
                 <div class="img-block">
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2774"><img src="https://images.dappei.com/uploads/article/square_cover/2774/medium_45128ceaa051ee11.jpg" alt="medium_45128ceaa051ee11.jpg"></a>
+                      <a href="https://dappei.com/articles/2774"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2774/medium_45128ceaa051ee11.jpg" alt="medium_45128ceaa051ee11.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/1">穿搭</a>
                       <div class="info">
                         <h3>
@@ -140,7 +181,7 @@
                   </div>
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2814"><img src="https://images.dappei.com/uploads/article/square_cover/2814/medium_34618a8ec73dbcef.jpg" alt="medium_34618a8ec73dbcef.jpg"></a>
+                      <a href="https://dappei.com/articles/2814"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2814/medium_34618a8ec73dbcef.jpg" alt="medium_34618a8ec73dbcef.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/2">人物</a>
                       <div class="info">
                         <h3>
@@ -153,7 +194,7 @@
                 <div class="img-block">
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2773"><img src="https://images.dappei.com/uploads/article/square_cover/2773/medium_c7088097457b624e.jpg" alt="medium_c7088097457b624e.jpg"></a>
+                      <a href="https://dappei.com/articles/2773"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2773/medium_c7088097457b624e.jpg" alt="medium_c7088097457b624e.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/1">穿搭</a>
                       <div class="info">
                         <h3>
@@ -164,7 +205,7 @@
                   </div>
                   <div class="article">
                     <div class="cover">
-                      <a href="https://dappei.com/articles/2830"><img src="https://images.dappei.com/uploads/article/square_cover/2830/medium_7e5ccc270ecaf9f9.jpg" alt="medium_7e5ccc270ecaf9f9.jpg"></a>
+                      <a href="https://dappei.com/articles/2830"><img class="img-hover" src="https://images.dappei.com/uploads/article/square_cover/2830/medium_7e5ccc270ecaf9f9.jpg" alt="medium_7e5ccc270ecaf9f9.jpg"></a>
                       <a class="category" href="https://dappei.com/article_categories/5">生活</a>
                       <div class="info">
                         <h3>
@@ -188,12 +229,20 @@
         <div class="photos">
           <h2>今日穿搭</h2>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/photo/image/71766/medium_8228e97d68c13556.jpg" alt="medium_8228e97d68c13556.jpg">
-            <img src="https://images.dappei.com/uploads/photo/image/71906/medium_65c265402d8be614.jpg" alt="medium_65c265402d8be614.jpg">
+            <div class="img-color">
+              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71766/medium_8228e97d68c13556.jpg" alt="medium_8228e97d68c13556.jpg">
+              <a href="#"><h3>熱門</h3></a>
+              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71906/medium_65c265402d8be614.jpg" alt="medium_65c265402d8be614.jpg">
+              <a href="#"><h3>精選</h3></a>
+            </div>
           </div>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/photo/image/71910/medium_6e92177ac9f663db.jpg" alt="medium_6e92177ac9f663db.jpg">
-            <img src="https://images.dappei.com/uploads/photo/image/71905/medium_48b1e52a5397ed33.jpg" alt="medium_48b1e52a5397ed33.jpg">
+            <div class="img-color">
+              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71910/medium_6e92177ac9f663db.jpg" alt="medium_6e92177ac9f663db.jpg">
+              <a href="#"><h3>男性</h3></a>
+              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71905/medium_48b1e52a5397ed33.jpg" alt="medium_48b1e52a5397ed33.jpg">
+              <a href="#"><h3>女性</h3></a>
+            </div>
           </div>
         </div>
         <div class="tags">
@@ -222,46 +271,46 @@
         <div class="users">
           <h2>熱門搭當</h2>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/user/face/571/medium_f0970f9a69f9410d.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/401/medium_e720a3f182baf76c.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/17969/medium_0e28c69c394849b6.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/26137/medium_809c97675a96d7e3.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/571/medium_f0970f9a69f9410d.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/401/medium_e720a3f182baf76c.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/17969/medium_0e28c69c394849b6.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/26137/medium_809c97675a96d7e3.jpg" alt="">
           </div>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/user/face/7425/medium_7d2d2449e9ba89e1.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/11344/medium_d424657c4966ad14.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/14/medium_87c50a0252c45d79.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/62731/medium_121275ce0c1e6890.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/7425/medium_7d2d2449e9ba89e1.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/11344/medium_d424657c4966ad14.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/14/medium_87c50a0252c45d79.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/62731/medium_121275ce0c1e6890.jpg" alt="">
           </div>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/user/face/29117/medium_12625964506056a1.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/38/medium_80584158d298a798.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/1374/medium_e88ff92196283ddd.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/26338/medium_a89c64a1a6868488.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/29117/medium_12625964506056a1.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/38/medium_80584158d298a798.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/1374/medium_e88ff92196283ddd.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/26338/medium_a89c64a1a6868488.jpg" alt="">
           </div>
           <div class="img-block">
-            <img src="https://images.dappei.com/uploads/user/face/47414/medium_d668393651fd8c0c.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/5781/medium_a97174c68d04376c.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/34501/medium_1c4f5f7cdf9f52bd.jpg" alt="">
-            <img src="https://images.dappei.com/uploads/user/face/18232/medium_ac4eb2c961586540.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/47414/medium_d668393651fd8c0c.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/5781/medium_a97174c68d04376c.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/34501/medium_1c4f5f7cdf9f52bd.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/18232/medium_ac4eb2c961586540.jpg" alt="">
           </div>
         </div>
         <div class="instagram">
           <h2>Instagram</h2>
           <div class="img-block">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19424959_316071335507959_8283604420504059904_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19366989_469622863384303_3464751818490249216_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19228140_118903918706854_2343612650967007232_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19424959_316071335507959_8283604420504059904_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19366989_469622863384303_3464751818490249216_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19228140_118903918706854_2343612650967007232_n.jpg" alt="">
           </div>
           <div class="img-block">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19121015_1948543158492906_932722448351100928_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19121857_1976850822527371_3972308191420612608_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19050119_712440105614487_5787962756325965824_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19121015_1948543158492906_932722448351100928_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19121857_1976850822527371_3972308191420612608_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/19050119_712440105614487_5787962756325965824_n.jpg" alt="">
           </div>
           <div class="img-block">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18950337_613819755476616_2714425378385952768_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18949650_1371634189586793_914127971558621184_n.jpg" alt="">
-            <img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18888715_117282285528333_7512235501097582592_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18950337_613819755476616_2714425378385952768_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18949650_1371634189586793_914127971558621184_n.jpg" alt="">
+            <img class="img-hover" src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/18888715_117282285528333_7512235501097582592_n.jpg" alt="">
           </div>
         </div>
       </div>
@@ -285,6 +334,12 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+
+
 </body>
+
 
 </html>

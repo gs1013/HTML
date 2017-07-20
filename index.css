@@ -24,6 +24,10 @@ a {
   width: 1010px;
 }
 
+#header-container h1{
+  margin: 0;
+}
+
 #logo {
   float: left;
   width: 110px;
@@ -38,30 +42,24 @@ a {
 #main-nav {
   float: left;
   margin-right: 10px;
-  display: flex;
+}
+
+#main-nav ul{
+  text-align: center;
+  list-style-type: none;
+  margin:0;
+  padding-left: 0;
+  padding-top: 11px;
+}
+
+#main-nav ul li {
+  display: inline-block;
 }
 
 #main-nav .main-nav a {
-  padding: 5px 15px;
-  height: 50px;
+  padding: 15px 15px;
   color: #C7C7C7;
   font-size: 16px;
-}
-
-#user-nav {
-  float: right;
-}
-
-#user-nav .user-nav {
-  display: flex;
-  padding: 0 20px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-#main-nav .main-nav li {
-  float: left;
 }
 
 #main-nav .dropdown a:hover {
@@ -72,51 +70,78 @@ a {
 #main-nav .fa-caret-down input {
   position: relative;
   width: 280px;
-  height: 30px;
+  height: 24px;
   border-radius: 3%;
 }
 
 #main-nav .fa-caret-down>button {
   position: absolute;
-  bottom: -45px;
-  right: 31%;
+  bottom: -40px;
+  right: 33%;
   background: none;
   border: none;
 }
 
+#user-nav {
+  float: right;
+}
+
+#user-nav .user-nav {
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 8px;
+}
+
 #user-nav ul .signin-button {
-  padding: 0 20px;
+  padding: 9px 20px;
   height: 34px;
   line-height: 34px;
-  color: white;
+  color: #FFFFFF;
   background: #333333;
   font-weight: bold;
   font-size: 16px;
-  border-style: none;
+  margin-right: 5px;
 }
 
 #user-nav ul .signup-button {
-  padding: 0 20px;
+  padding: 9px 20px;
   height: 34px;
   line-height: 34px;
-  color: white;
+  color: #FFFFFF;
   background-color: #9F35FF;
   font-weight: bold;
   font-size: 16px;
-  border-style: none;
+}
+
+#user-nav ul .signin-button:hover{
+  background-color: #3a3838;
+  color: #FFFFFF;
+}
+
+#user-nav ul .signup-button:hover{
+  background-color: #9b55db;
+  color: #FFFFFF;
 }
 
 #container {
   margin: 0 auto;
   padding: 70px 25px 40px 25px;
+  width: 960px;
   min-height: 100%;
   background-color: #FFFFFF;
   cursor: auto;
 }
 
-#page{
-  width: 1010px;
-  height: 2315px;
+#pages {
+  position: relative;
+  top: -20px;
+}
+
+#pages .img-hover:hover{
+  border: 0px solid #aaa;
+  z-index: 1;
+  opacity: 0.6;
 }
 
 #banner {
@@ -124,16 +149,27 @@ a {
   margin-bottom: 45px;
   width: 960px;
   height: 450px;
+
 }
 
-#banner .slides articles li {
-  position: relative;
+#banner .slides-articles{
+  margin: auto;
+  width: 960px;
+  padding: 0;
 }
 
-#banner .slides-h3 {
+#banner .slideshow{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 600ms;
+}
+
+
+
+#slides-h3 {
   position: absolute;
   bottom: 24px;
-  left: 45px;
+  left: 54px;
   z-index: 2;
   width: 650px;
   height: 85px;
@@ -142,6 +178,21 @@ a {
   overflow: hidden;
   font-weight: 600;
   color: #FFFFFF;
+}
+
+#banner .control-nav{
+  position: absolute;
+  bottom: 0px;
+  right: 44px;
+  }
+
+#banner .control-nav li {
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  display:inline-block;
+  margin-right: 15px;
+  padding: 4px 4px;
+
 }
 
 #main {
@@ -158,9 +209,7 @@ a {
   border-bottom: 1px solid #000000;
 }
 
-#main .tab li {
-  float: left;
-}
+
 
 #main .tab li a:hover {
   background-color: #303030;
@@ -168,6 +217,7 @@ a {
 }
 
 #main .tab li a {
+  float: left;
   display: block;
   margin-top: 5px;
   width: 160px;
@@ -180,6 +230,10 @@ a {
   text-align: center;
   font-weight: 400;
   letter-spacing: 3px;
+}
+
+#main .articles-list li a{
+  color:#000000;
 }
 
 #articles-list .cover a {
@@ -200,9 +254,20 @@ a {
   display: flex;
 }
 
+#articles-list .info a {
+  color: #333333;
+  font-weight: 400;
+  bottom: 28px;
+  width: 300px;
+  }
+
+#articles-list .more a{
+  color: #333333;
+}
+
 #articles-list .more {
   border-top: 1px solid #000000;
-  padding: 10px 0;
+  padding: 10px 9px;
   text-align: right;
   width: 600px;
 }
@@ -214,6 +279,19 @@ a {
   height: 527px;
 }
 
+#sidebar .img-color{
+  position: relative;
+  border: 0px solid #303030;
+  z-index: -1
+  opacity: 0.3;
+}
+
+#sidebar .img-color a{
+  position: absolute;
+
+  color: #FFFFFF;
+}
+
 #sidebar h2 {
   border-bottom: 1px solid #000000;
 }
@@ -221,10 +299,9 @@ a {
 #sidebar .photos img {
   width: 142px;
   height: 227px;
-
 }
 
-#sidebar .tags a{
+#sidebar .tags a {
   display: inline-block;
   width: 78px;
   color: #000000;
@@ -236,26 +313,26 @@ a {
   margin-bottom: 10px;
   font-size: 13px;
   text-align: center;
+
 }
 
-#sidebar .users img{
+#sidebar .users img {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-#sidebar .instagram img{
+#sidebar .instagram img {
   width: 94px;
   height: 94px;
-
 }
 
 #footer {
   background-color: #000000;
 }
 
-#footer .fanpage img{
+#footer .fanpage img {
   width: 315px;
   height: 70px;
 }
