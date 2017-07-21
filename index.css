@@ -164,21 +164,20 @@ a {
   transition: opacity 600ms;
 }
 
-
-
-#slides-h3 {
+#banner .next,.prev{
   position: absolute;
-  bottom: 24px;
-  left: 54px;
-  z-index: 2;
-  width: 650px;
-  height: 85px;
-  font-size: 26px;
-  line-height: 38px;
-  overflow: hidden;
-  font-weight: 600;
-  color: #FFFFFF;
+  top: 50%;
+  color: #F2F2F2;
+  padding: 10px 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
+
+#banner .next{
+  right: 0;
+}
+
+
 
 #banner .control-nav{
   position: absolute;
@@ -201,15 +200,12 @@ a {
   display: inline-block;
 }
 
-#main .article-container {}
-
 #main .tab {
   margin-bottom: 20px;
   height: 40px;
   border-bottom: 1px solid #000000;
+  padding: 0;
 }
-
-
 
 #main .tab li a:hover {
   background-color: #303030;
@@ -218,7 +214,6 @@ a {
 
 #main .tab li a {
   float: left;
-  display: block;
   margin-top: 5px;
   width: 160px;
   height: 35px;
@@ -261,6 +256,10 @@ a {
   width: 300px;
   }
 
+#articles-list .info a:hover{
+  color: #882dce;
+}
+
 #articles-list .more a{
   color: #333333;
 }
@@ -279,27 +278,56 @@ a {
   height: 527px;
 }
 
-#sidebar .img-color{
-  position: relative;
-  border: 0px solid #303030;
-  z-index: -1
-  opacity: 0.3;
-}
-
-#sidebar .img-color a{
-  position: absolute;
-
-  color: #FFFFFF;
-}
-
 #sidebar h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 40px;
+  letter-spacing: 2px;
   border-bottom: 1px solid #000000;
+}
+
+#sidebar .img-blocks{
+  display: inline-grid;
 }
 
 #sidebar .photos img {
   width: 142px;
   height: 227px;
+  position: relative;
 }
+
+#sidebar .img-color{
+  position: relative;
+}
+
+#sidebar .img-color a{
+  position: absolute;
+  top: 0;
+}
+
+#sidebar .img-color h3:hover{
+  background: rgba(0,0,0,0.2);
+}
+
+#sidebar .photos h3{
+
+  bottom: 0;
+  left: 0;
+  width: 142px;
+  height: 227px;
+  line-height: 227px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  background: rgba(0,0,0,0.5);
+  margin:0;
+}
+
+
 
 #sidebar .tags a {
   display: inline-block;
@@ -313,7 +341,11 @@ a {
   margin-bottom: 10px;
   font-size: 13px;
   text-align: center;
+}
 
+#sidebar .tags a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 #sidebar .users img {
@@ -349,5 +381,9 @@ a {
 }
 
 #footer-nav-container a {
-  color: white;
+  color:#cecece;
+}
+
+#footer-nav-container a:hover{
+  color: #FFFFFF;
 }

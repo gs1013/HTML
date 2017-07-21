@@ -6,19 +6,19 @@
   <title>Dappei 搭配 - 高质感服侍穿搭网站</title>
   <link rel="stylesheet" href="index.css">
   <script type="text/javascript">
-    window.onload = function(){
+    window.onload = function() {
       var slideshow = document.getElementsByClassName('slideshow');
       var index = 0;
       Slideshow();
 
-      function Slideshow(){
-        for(var i = 0; i < slideshow.length; i++){
+      function Slideshow() {
+        for (var i = 0; i < slideshow.length; i++) {
           slideshow[i].style.opacity = "0";
         }
         slideshow[index].style.opacity = "1";
         index++;
 
-        if(index > slideshow.length - 1){
+        if (index > slideshow.length - 1) {
           index = 0;
         }
         setTimeout(Slideshow, 4000);
@@ -26,12 +26,41 @@
 
     }
   </script>
+<script type="text/javascript">
+  var slideIndex = 1;
+  showSlide(slideIndex);
+
+  function plusSlides(n){
+    showSlide(slideIndex += n);
+  }
+
+  function currentSlide(n){
+    showSlide(slideIndex = n);
+  }
+
+  function showImage(n){
+    var = 1;
+    var slideshow = document.getElementsByClassName("slideshow");
+    var control-nav-trol =document.getElementsByClassName("control-nav-trol")
+    if (n > slides.length) { slideIndex = 1};
+    if (n < 1) { slideIndex = slides.length};
+
+    for (i = 0; i < slides.length; i++){
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < slides.length; i++){
+      control-nav-trol[i].className = control-nav-trol[1].className.replace("active"."");
+    }
+    slides[slideIndex-1].style.display = "block" ;
+    control-nav-trol[slideIndex-1].className += "active";
+  }
+</script>
 </head>
 
 <body>
 
 
-  <header id="header" style="opacity:1;">
+  <header id="header" >
     <div id="header-container">
       <h1>
         <a id="logo" href="https://dappei.com/">Dappei</a>
@@ -75,34 +104,36 @@
       <div id="banner">
         <ul class="slides-articles">
           <li class="slideshow">
-            <img src="https://images.dappei.com/uploads/article/cover/2879/large_76adeb91644ed0ee.jpg">
+            <img class="slides" src="https://images.dappei.com/uploads/article/cover/2879/large_76adeb91644ed0ee.jpg">
             <span id="slides-h3">拍照不要再腳交叉了！跟著超短瀏海始祖「三戶夏芽」擺 pose，六招擺脫類網美</span>
           </li>
           <li class="slideshow">
-            <img src="https://images.dappei.com/uploads/article/cover/2856/large_0f050f1447d84730.jpg">
+            <img class="slides" src="https://images.dappei.com/uploads/article/cover/2856/large_0f050f1447d84730.jpg">
             <span id="slides-h3">現在大家都在喝「方型」珍珠！拿著超潮提袋，連路人都問你去哪買？</span>
           </li>
           <li class="slideshow">
-            <img src="https://images.dappei.com/uploads/article/cover/2862/large_68caa5c6ec4fde7a.jpg">
+            <img class="slides" src="https://images.dappei.com/uploads/article/cover/2862/large_68caa5c6ec4fde7a.jpg">
             <span id="slides-h3">讓《花甲男孩》迷哭倒！非戲劇班出身的她除了驚人的好演技，現實生活中穿搭依舊鄭花慧</span>
           </li>
           <li class="slideshow">
-            <img src="https://images.dappei.com/uploads/article/cover/2892/large_e39969b18a7720f2.jpg">
+            <img class="slides" src="https://images.dappei.com/uploads/article/cover/2892/large_e39969b18a7720f2.jpg">
             <span id="slides-h3">韓妞集體淪陷，曾登韓國代購第一寶座！降落台灣的「花生人」星球崛起，讓你少女心噴發抵擋不了</span>
           </li>
-        </ul>
+          <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
+          <a class="next" onclick="plusSlides(1)" >&#10095;</a>
+          </ul>
         <ol class="control-nav ">
           <li>
-            <a class="control-nav-trol" href='javascript: void(0)'></a>
+            <a class="control-nav-trol" onclick="currentSlide(1)"></a>
           </li>
           <li>
-            <a class="control-nav-trol" href='javascript: void(0)'></a>
+            <a class="control-nav-trol" onclick="currentSlide(2)"></a>
           </li>
           <li>
-            <a class="control-nav-trol" href='javascript: void(0)'></a>
+            <a class="control-nav-trol" onclick="currentSlide(3)"></a>
           </li>
           <li>
-            <a class="control-nav-trol" href='javascript: void(0)'></a>
+            <a class="control-nav-trol" onclick="currentSlide(4)"></a>
           </li>
         </ol>
       </div>
@@ -228,20 +259,24 @@
       <div id="sidebar">
         <div class="photos">
           <h2>今日穿搭</h2>
-          <div class="img-block">
+          <div class="img-blocks">
             <div class="img-color">
-              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71766/medium_8228e97d68c13556.jpg" alt="medium_8228e97d68c13556.jpg">
+              <img class="" src="https://images.dappei.com/uploads/photo/image/71766/medium_8228e97d68c13556.jpg" alt="medium_8228e97d68c13556.jpg">
               <a href="#"><h3>熱門</h3></a>
-              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71906/medium_65c265402d8be614.jpg" alt="medium_65c265402d8be614.jpg">
+            </div>
+            <div class="img-color">
+              <img class="" src="https://images.dappei.com/uploads/photo/image/71906/medium_65c265402d8be614.jpg" alt="medium_65c265402d8be614.jpg">
               <a href="#"><h3>精選</h3></a>
             </div>
           </div>
-          <div class="img-block">
+          <div class="img-blocks">
             <div class="img-color">
-              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71910/medium_6e92177ac9f663db.jpg" alt="medium_6e92177ac9f663db.jpg">
-              <a href="#"><h3>男性</h3></a>
-              <img class="img-hover" src="https://images.dappei.com/uploads/photo/image/71905/medium_48b1e52a5397ed33.jpg" alt="medium_48b1e52a5397ed33.jpg">
+              <img class="" src="https://images.dappei.com/uploads/photo/image/71910/medium_6e92177ac9f663db.jpg" alt="medium_6e92177ac9f663db.jpg">
               <a href="#"><h3>女性</h3></a>
+            </div>
+            <div class="img-color">
+              <img class="" src="https://images.dappei.com/uploads/photo/image/71905/medium_48b1e52a5397ed33.jpg" alt="medium_48b1e52a5397ed33.jpg">
+              <a href="#"><h3>男性</h3></a>
             </div>
           </div>
         </div>
@@ -283,7 +318,7 @@
             <img class="img-hover" src="https://images.dappei.com/uploads/user/face/62731/medium_121275ce0c1e6890.jpg" alt="">
           </div>
           <div class="img-block">
-            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/29117/medium_12625964506056a1.jpg" alt="">
+            <img class="img-hover" src="https://images.dappei.com/uploads/user/face/652/medium_b941eb90a4cb1903.jpg" alt="">
             <img class="img-hover" src="https://images.dappei.com/uploads/user/face/38/medium_80584158d298a798.jpg" alt="">
             <img class="img-hover" src="https://images.dappei.com/uploads/user/face/1374/medium_e88ff92196283ddd.jpg" alt="">
             <img class="img-hover" src="https://images.dappei.com/uploads/user/face/26338/medium_a89c64a1a6868488.jpg" alt="">
